@@ -3,4 +3,6 @@
  */
 fun main() {
     arrays.main()
+    lists.main()
+    println("All tests passed.")
 }
