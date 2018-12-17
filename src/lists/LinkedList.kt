@@ -1,25 +1,25 @@
 package lists
 
 /**
- * A non-generic singularly linked list.
+ * A non-generic singly linked list.
  * Use the [head] to start iteration.
  */
 class LinkedList {
 
     /**
-     * The head of the list, not an actual element of the list.
+     * The head of the list, i.e. the first element.
      */
-    val head = Node(Unit)
+    var head: Node? = null
     private var tail = head
 
     /**
      * Adds a value to the end of the list.
      *
-     * @param value the value to add. Not `null`.
+     * @param node the element to add.
      */
-    fun add(value: Any) {
-        tail.next = Node(value)
-        tail = tail.next!!
+    fun add(node: Node) {
+        if (head == null) head = node else tail?.next = node
+        tail = node
     }
 
     /**
