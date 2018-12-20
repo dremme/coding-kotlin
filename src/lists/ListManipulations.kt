@@ -3,10 +3,10 @@ package lists
 /**
  * Reverses the given linked [list] with one loop.
  */
-fun reverseList(list: LinkedList) {
+fun <T> reverseList(list: LinkedList<T>) {
     var pointer = list.head
-    var current: LinkedList.Node?
-    var previous: LinkedList.Node? = null
+    var current: LinkedList<T>.Node?
+    var previous: LinkedList<T>.Node? = null
 
     while (pointer != null) {
         current = pointer

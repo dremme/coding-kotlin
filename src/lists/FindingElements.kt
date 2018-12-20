@@ -4,11 +4,11 @@ package lists
  * Finds the middle element of a list with only one loop.
  * Will find the higher element when the list has an even size.
  *
- * @param list a non-generic singly linked list.
+ * @param list a singly linked list.
  *
  * @return the middle element or `null` if list is empty.
  */
-fun findMiddleElement(list: LinkedList): Any? {
+fun findMiddleElement(list: LinkedList<Int>): Int? {
     var counter = 0
     var current = list.head
     var middle = current
@@ -24,11 +24,11 @@ fun findMiddleElement(list: LinkedList): Any? {
 /**
  * Determines if the list has a cycle at any point with only one loop.
  *
- * @param list a non-generic singly linked list.
+ * @param list a singly linked list.
  *
  * @return `true` if the list is cyclic. An empty list is not cyclic.
  */
-fun isCyclic(list: LinkedList): Boolean {
+fun isCyclic(list: LinkedList<Int>): Boolean {
     var counter = 0
     var fast = list.head
     var slow = fast

@@ -1,10 +1,10 @@
 package lists
 
 /**
- * A non-generic singly linked list.
+ * A generic singly linked list.
  * Use the [head] to start iteration.
  */
-class LinkedList {
+class LinkedList<T> {
 
     /**
      * The head of the list, i.e. the first element.
@@ -22,9 +22,20 @@ class LinkedList {
         tail = node
     }
 
+    override fun toString(): String {
+        val b = StringBuilder().append('[')
+        var current = head
+        while (current != null) {
+            b.append(current).append(", "); current = current.next
+        }
+        return b.append(']').replace(", ]".toRegex(), "]")
+    }
+
     /**
      * A node class, or element of the list, containing a [value] and a [next] element or `null` if there is none.
      */
-    inner class Node(var value: Any, var next: Node? = null)
+    inner class Node(var value: T, var next: Node? = null) {
+        override fun toString() = value.toString()
+    }
 
 }

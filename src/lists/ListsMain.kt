@@ -8,14 +8,14 @@ import kotlin.test.assertTrue
  * Testing list functions.
  */
 fun main() {
-    val list1 = LinkedList()
-    val list2 = LinkedList().addAll(1, 2, 3, 4, 5)
-    val list3 = LinkedList().addAll(1, 2, 3, 4, 5, 6)
-    val list5 = LinkedList().addAll(1)
-    val list4 = LinkedList().addAll(1, 2, 3, 4)
+    val list1 = LinkedList<Int>()
+    val list2 = LinkedList<Int>().addAll(1, 2, 3, 4, 5)
+    val list3 = LinkedList<Int>().addAll(1, 2, 3, 4, 5, 6)
+    val list5 = LinkedList<Int>().addAll(1)
+    val list4 = LinkedList<Int>().addAll(1, 2, 3, 4)
     list4.head?.next?.next?.next?.next = list4.head?.next
-    val list6 = LinkedList().addAll(5, 4, 3, 2, 1)
-    val list7 = LinkedList().addAll(1)
+    val list6 = LinkedList<Int>().addAll(5, 4, 3, 2, 1)
+    val list7 = LinkedList<Int>().addAll(1)
     list7.head?.next = list7.head
 
     /*
@@ -42,7 +42,7 @@ fun main() {
 /**
  * Adds all [elements] to the end of the list.
  */
-private fun LinkedList.addAll(vararg elements: Any): LinkedList {
+private fun <T> LinkedList<T>.addAll(vararg elements: T): LinkedList<T> {
     elements.forEach { this.add(Node(it)) }
     return this
 }
@@ -50,7 +50,7 @@ private fun LinkedList.addAll(vararg elements: Any): LinkedList {
 /**
  * Determines if the contents of the list is equal to an[other] list.
  */
-private infix fun LinkedList.contentEquals(other: LinkedList): Boolean {
+private infix fun <T> LinkedList<T>.contentEquals(other: LinkedList<T>): Boolean {
     if (size() != other.size()) return false
 
     var current = head
@@ -65,7 +65,10 @@ private infix fun LinkedList.contentEquals(other: LinkedList): Boolean {
     return true
 }
 
-private fun LinkedList.size(): Int {
+/**
+ * Determines the size of a linked list.
+ */
+private fun LinkedList<*>.size(): Int {
     var size = 0
     var current = head
     while (current != null) {
