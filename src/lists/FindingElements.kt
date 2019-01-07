@@ -1,16 +1,33 @@
 package lists
 
 /**
- * Finds the middle element of a list with only one loop.
+ * Determines the size.
+ */
+fun LinkedList<*>.size(): Int {
+    var size = 0
+    var current = head
+    while (current != null) {
+        current = current.next; size++
+    }
+    return size
+}
+
+/**
+ * Determines the size recursively.
+ */
+fun LinkedList<*>.size(current: LinkedList<*>.Node<*>? = head): Int {
+    return if (current == null) 0 else size(current.next) + 1
+}
+
+/**
+ * Finds the middle element with only one loop.
  * Will find the higher element when the list has an even size.
  *
- * @param list a singly linked list.
- *
- * @return the middle element or `null` if list is empty.
+ * @return the middle element or `null` if the list is empty.
  */
-fun findMiddleElement(list: LinkedList<Int>): Int? {
+fun <T> LinkedList<T>.findMiddleElement(): T? {
     var counter = 0
-    var current = list.head
+    var current = head
     var middle = current
 
     while (current != null) {
@@ -22,15 +39,13 @@ fun findMiddleElement(list: LinkedList<Int>): Int? {
 }
 
 /**
- * Determines if the list has a cycle at any point with only one loop.
- *
- * @param list a singly linked list.
+ * Finds a cycle at any point of the list with only one loop.
  *
  * @return `true` if the list is cyclic. An empty list is not cyclic.
  */
-fun isCyclic(list: LinkedList<Int>): Boolean {
+fun LinkedList<*>.isCyclic(): Boolean {
     var counter = 0
-    var fast = list.head
+    var fast = head
     var slow = fast
 
     while (fast != null) {

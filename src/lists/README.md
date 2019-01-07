@@ -25,10 +25,16 @@ class LinkedList<T> {
 
 ### Finding elements
 
+Determine the size of a linked list. Also determine the size recursively without helper functions.
+
+```kotlin
+fun LinkedList<*>.size(): Int
+```
+---
 Find the middle element at index `size / 2` rounded up, with only one loop or `null`.
 
 ```kotlin
-fun findMiddleElement(list: LinkedList<Int>): Int?
+fun <T> LinkedList<T>.findMiddleElement(): T?
 ```
 ---
 Determine if the linked list contains a cycle, meaning a node points to another node in the list or itself.
@@ -37,7 +43,7 @@ This does not mean that the list is an actual circle. The cycle can occur at any
 The function should only contain one loop. An empty list is not cyclic.
 
 ```kotlin
-fun isCyclic(list: LinkedList<Int>): Boolean
+fun LinkedList<*>.isCyclic(): Boolean
 ```
 
 ### List manipulations
@@ -45,5 +51,5 @@ fun isCyclic(list: LinkedList<Int>): Boolean
 Reverse a linked list with one loop.
 
 ```kotlin
-fun <T> reverseList(list: LinkedList<T>)
+fun <T> LinkedList<T>.reverse()
 ```

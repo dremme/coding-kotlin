@@ -11,8 +11,8 @@ fun main() {
     val list1 = LinkedList<Int>()
     val list2 = LinkedList<Int>().addAll(1, 2, 3, 4, 5)
     val list3 = LinkedList<Int>().addAll(1, 2, 3, 4, 5, 6)
-    val list5 = LinkedList<Int>().addAll(1)
-    val list4 = LinkedList<Int>().addAll(1, 2, 3, 4)
+    val list5 = LinkedList<String>().addAll("1")
+    val list4 = LinkedList<String>().addAll("1", "2", "3", "4")
     list4.head?.next?.next?.next?.next = list4.head?.next
     val list6 = LinkedList<Int>().addAll(5, 4, 3, 2, 1)
     val list7 = LinkedList<Int>().addAll(1)
@@ -21,21 +21,25 @@ fun main() {
     /*
      * Finding elements
      */
-    assertEquals(null, findMiddleElement(list1))
-    assertEquals(3, findMiddleElement(list2))
-    assertEquals(4, findMiddleElement(list3))
-    assertEquals(1, findMiddleElement(list5))
+    assertEquals(0, list1.size())
+    assertEquals(6, list3.size())
+    assertEquals(6, list3.size(list3.head)) // Must use parameter because of the other size function
 
-    assertFalse(isCyclic(list1))
-    assertFalse(isCyclic(list2))
-    assertTrue(isCyclic(list4))
-    assertTrue(isCyclic(list7))
+    assertEquals(null, list1.findMiddleElement())
+    assertEquals(3, list2.findMiddleElement())
+    assertEquals(4, list3.findMiddleElement())
+    assertEquals("1", list5.findMiddleElement())
+
+    assertFalse(list1.isCyclic())
+    assertFalse(list2.isCyclic())
+    assertTrue(list4.isCyclic())
+    assertTrue(list7.isCyclic())
 
     /*
      * List manipulations
      */
-    reverseList(list1)
-    reverseList(list2)
+    list1.reverse()
+    list2.reverse()
     assertTrue(list6 contentEquals list2)
 }
 
@@ -60,16 +64,4 @@ private infix fun <T> LinkedList<T>.contentEquals(other: LinkedList<T>): Boolean
     }
 
     return true
-}
-
-/**
- * Determines the size of a linked list.
- */
-private fun LinkedList<*>.size(): Int {
-    var size = 0
-    var current = head
-    while (current != null) {
-        current = current.next; size++
-    }
-    return size
 }
