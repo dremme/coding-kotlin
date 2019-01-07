@@ -5,10 +5,10 @@ Can be used to learn Kotlin, practice for an interview or improve general algori
 
 This Project is separated into popular categories:
 
- * [Arrays](src/arrays/README.md)
- * [Linked Lists](src/lists/README.md)
+ * [Arrays](src/main/arrays/README.md)
+ * [Linked Lists](src/main/lists/README.md)
  * Working with Collections
- * [Strings](src/strings/README.md)
+ * [Strings](src/main/strings/README.md)
  * Binary Trees
  * Patterns
  * Misc

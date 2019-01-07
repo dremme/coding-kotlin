@@ -1,5 +1,5 @@
 /**
- * A `main` that calls all other `main`s.
+ * Test all functions.
  */
 fun main() {
     arrays.main()
