@@ -59,12 +59,12 @@ fun findLongestSeriesOfNumbers(array: IntArray): IntArray
 Reverse an array in place in `O(n)`.
 
 ```kotlin
-fun reverseArray(array: IntArray)
+fun IntArray.reverse()
 ```
 ---
-Flattens an array of arrays into an array of integers, e.g. turns `[[1], 2, [3, [4]]]` into `[1, 2, 3, 4]`.
+Flatten an array of arrays into an array of integers, e.g. turns `[[1], 2, [3, [4]]]` into `[1, 2, 3, 4]`.
 No utility functions or other collections than arrays are allowed.
 
 ```kotlin
-fun flattenArray(arrayOfArrays: Array<*>): IntArray
+fun Array<*>.flatten(): IntArray
 ```

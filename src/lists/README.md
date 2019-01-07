@@ -9,15 +9,16 @@ Here we will focus on a generic singly linked list like this:
 ```kotlin
 class LinkedList<T> {
 
-    var head: Node? = null
+    var head: Node<T>? = null
     private var tail = head
 
-    fun add(node: Node) {
+    fun add(value: T) {
+        val node = Node(value)
         if (head == null) head = node else tail?.next = node
         tail = node
     }
 
-    inner class Node(var value: T, var next: Node? = null)
+    inner class Node<T>(var value: T, var next: Node<T>? = null)
 
 }
 ```

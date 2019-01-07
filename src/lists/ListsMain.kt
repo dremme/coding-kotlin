@@ -42,10 +42,7 @@ fun main() {
 /**
  * Adds all [elements] to the end of the list.
  */
-private fun <T> LinkedList<T>.addAll(vararg elements: T): LinkedList<T> {
-    elements.forEach { this.add(Node(it)) }
-    return this
-}
+private fun <T> LinkedList<T>.addAll(vararg elements: T) = apply { elements.forEach { this.add(it) } }
 
 /**
  * Determines if the contents of the list is equal to an[other] list.

@@ -1,27 +1,27 @@
 package arrays
 
 /**
- * Reverses the given [array] in place.
+ * Reverses the array in place.
  */
-fun reverseArray(array: IntArray) {
-    (0 until array.size / 2).forEach {
-        val temp = array[it]
-        array[it] = array[array.size - it - 1]
-        array[array.size - it - 1] = temp
+fun IntArray.reverse() {
+    (0 until size / 2).forEach {
+        val temp = this[it]
+        this[it] = this[size - it - 1]
+        this[size - it - 1] = temp
     }
 }
 
 /**
- * Flattens the given [arrayOfArrays] into a single layer, e.g. turns `[[1], 2, [3, [4]]]` into `[1, 2, 3, 4]`.
+ * Deeply flattens the array of arrays into a single layer, e.g. turns `[[1], 2, [3, [4]]]` into `[1, 2, 3, 4]`.
  *
- * @return an array of integers contained in the [arrayOfArrays].
+ * @return an array of integers contained in the array of arrays.
  */
-fun flattenArray(arrayOfArrays: Array<*>): IntArray {
-    if (arrayOfArrays.isEmpty()) return intArrayOf()
+fun Array<*>.flatten(): IntArray {
+    if (isEmpty()) return intArrayOf()
 
     var array = intArrayOf()
-    arrayOfArrays.forEach {
-        if (it is Array<*>) array += flattenArray(it)
+    forEach {
+        if (it is Array<*>) array += it.flatten()
         else array += it as Int
     }
     return array

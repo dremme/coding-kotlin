@@ -61,11 +61,11 @@ fun main() {
     /*
      * Array manipulations
      */
-    reverseArray(array1)
-    reverseArray(array2)
+    array1.reverse()
+    array2.reverse()
     assertTrue(intArrayOf(5, 4, 3, 2, 1) contentEquals array1)
     assertTrue(intArrayOf(6, 4, 3, 1) contentEquals array2)
 
-    assertTrue(intArrayOf() contentEquals flattenArray(arrayOf<Any>()))
-    assertTrue(intArrayOf(1, 2, 3, 4) contentEquals flattenArray(arrayOf<Any>(arrayOf(1), 2, arrayOf(3, arrayOf(4)))))
+    assertTrue(intArrayOf() contentEquals arrayOf<Any>().flatten())
+    assertTrue(intArrayOf(1, 2, 3, 4) contentEquals arrayOf<Any>(arrayOf(1), 2, arrayOf(3, arrayOf(4))).flatten())
 }
