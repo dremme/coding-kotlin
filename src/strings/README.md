@@ -11,5 +11,5 @@ As with arrays algorithms are often required to have `O(n)` or even `O(1)` time 
 Convert a string of numeric characters into an integer (unsigned), without using and libraries or parsing functions.
 
 ```kotlin
-fun convertToInt(text: String): Int
+fun String.toInt(): Int
 ```

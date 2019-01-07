@@ -7,8 +7,8 @@ import kotlin.test.assertEquals
  */
 fun main() {
     // Converting strings
-    assertEquals(0, convertToInt("0"))
-    assertEquals(9, convertToInt("9"))
-    assertEquals(12, convertToInt("12"))
-    assertEquals(Int.MAX_VALUE, convertToInt(Int.MAX_VALUE.toString()))
+    assertEquals(0, "0".toInt())
+    assertEquals(9, "9".toInt())
+    assertEquals(12, "12".toInt())
+    assertEquals(Int.MAX_VALUE, Int.MAX_VALUE.toString().toInt())
 }
