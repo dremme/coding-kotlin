@@ -17,7 +17,7 @@ Find all missing numbers (gaps) in an array of integers greater than zero, using
 ```kotlin
 fun findMissingNumbers(array: IntArray, maximum: Int): IntArray
 ```
-
+---
 Find the first missing number (gap) in an array of integers greater than zero or return `null`.
 
 ```kotlin
@@ -39,7 +39,7 @@ Find the smallest and largest number is an array and return them as tuple `(min,
 ```kotlin
 fun findMinMaxNumbers(array: IntArray): Pair<Int, Int>?
 ```
-
+---
 Find all prime numbers in an array. A helper-function `isPrime(n: Int)` is strongly advised.
 
 ```kotlin
@@ -61,7 +61,7 @@ Reverse an array in place in `O(n)`.
 ```kotlin
 fun reverseArray(array: IntArray)
 ```
-
+---
 Flattens an array of arrays into an array of integers, e.g. turns `[[1], 2, [3, [4]]]` into `[1, 2, 3, 4]`.
 No utility functions or other collections than arrays are allowed.
 

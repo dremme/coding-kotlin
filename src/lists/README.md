@@ -29,7 +29,7 @@ Find the middle element at index `size / 2` rounded up, with only one loop or `n
 ```kotlin
 fun findMiddleElement(list: LinkedList<Int>): Int?
 ```
-
+---
 Determine if the linked list contains a cycle, meaning a node points to another node in the list or itself.
 This does not mean that the list is an actual circle. The cycle can occur at any point.
 
