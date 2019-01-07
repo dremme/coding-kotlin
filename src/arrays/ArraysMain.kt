@@ -23,40 +23,40 @@ fun main() {
     /*
      * Missing numbers
      */
-    assertTrue(intArrayOf() contentEquals findMissingNumbers(array1, 5))
-    assertTrue(intArrayOf(2, 5, 7) contentEquals findMissingNumbers(array2, 7))
-    assertFails { findMissingNumbers(array1, 0) }
-    assertFails { findMissingNumbers(array3, 1) }
+    assertTrue(intArrayOf() contentEquals array1.findMissingNumbers(5))
+    assertTrue(intArrayOf(2, 5, 7) contentEquals array2.findMissingNumbers(7))
+    assertFails { array1.findMissingNumbers(0) }
+    assertFails { array3.findMissingNumbers(1) }
 
-    assertEquals(null, findFirstMissingNumber(array1))
-    assertEquals(2, findFirstMissingNumber(array2))
-    assertFails { findFirstMissingNumber(array3) }
+    assertEquals(null, array1.findFirstMissingNumber())
+    assertEquals(2, array2.findFirstMissingNumber())
+    assertFails { array3.findFirstMissingNumber() }
 
     /*
      * Duplicate numbers
      */
-    assertEquals(null, findDuplicateNumber(array1))
-    assertEquals(3, findDuplicateNumber(array4))
-    assertFails { findDuplicateNumber(array3) }
+    assertEquals(null, array1.findDuplicateNumber())
+    assertEquals(3, array4.findDuplicateNumber())
+    assertFails { array3.findDuplicateNumber() }
 
     /*
      * Special numbers
      */
-    assertEquals(null, findMinMaxNumbers(intArrayOf()))
-    assertEquals(1 to 5, findMinMaxNumbers(array1))
-    assertEquals(-1 to 1, findMinMaxNumbers(array3))
+    assertEquals(null, intArrayOf().findMinMaxNumbers())
+    assertEquals(1 to 5, array1.findMinMaxNumbers())
+    assertEquals(-1 to 1, array3.findMinMaxNumbers())
 
-    assertTrue(intArrayOf() contentEquals findPrimeNumbers(intArrayOf(1, 4, 6)))
-    assertTrue(intArrayOf(2, 3, 5, 23, 101) contentEquals findPrimeNumbers(array5))
-    assertFails { findPrimeNumbers(array3) }
+    assertTrue(intArrayOf() contentEquals intArrayOf(1, 4, 6).findPrimeNumbers())
+    assertTrue(intArrayOf(2, 3, 5, 23, 101) contentEquals array5.findPrimeNumbers())
+    assertFails { array3.findPrimeNumbers() }
 
     /*
      * Number series
      */
-    assertTrue(intArrayOf() contentEquals findLongestSeriesOfNumbers(intArrayOf()))
-    assertTrue(intArrayOf(1) contentEquals findLongestSeriesOfNumbers(intArrayOf(1)))
-    assertTrue(intArrayOf(0) contentEquals findLongestSeriesOfNumbers(intArrayOf(0, 2, 4, 6)))
-    assertTrue(series6 contentEquals findLongestSeriesOfNumbers(array6))
+    assertTrue(intArrayOf() contentEquals intArrayOf().findLongestSeriesOfNumbers())
+    assertTrue(intArrayOf(1) contentEquals intArrayOf(1).findLongestSeriesOfNumbers())
+    assertTrue(intArrayOf(0) contentEquals intArrayOf(0, 2, 4, 6).findLongestSeriesOfNumbers())
+    assertTrue(series6 contentEquals array6.findLongestSeriesOfNumbers())
 
     /*
      * Array manipulations

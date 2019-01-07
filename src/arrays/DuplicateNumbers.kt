@@ -1,17 +1,15 @@
 package arrays
 
 /**
- * Finds the first duplicate number in an [array].
+ * Finds the first duplicate number. Elements must be greater than zero.
  *
- * @param array an array of integers. Elements must be greater than zero.
- *
- * @return the duplicate number or `null` if the [array] is distinct.
+ * @return the duplicate number or `null` if the array is distinct.
  */
-fun findDuplicateNumber(array: IntArray): Int? {
-    require(array.all { it > 0 })
+fun IntArray.findDuplicateNumber(): Int? {
+    require(all { it > 0 })
 
     var last = 0
-    array.forEach {
+    forEach {
         if (it == last) return it
         last = it
     }

@@ -15,13 +15,13 @@ Method extensions and self-written utility functions _might_ be allowed.
 Find all missing numbers (gaps) in an array of integers greater than zero, using the given maximum integer expected in that array.
 
 ```kotlin
-fun findMissingNumbers(array: IntArray, maximum: Int): IntArray
+fun IntArray.findMissingNumbers(maximum: Int): IntArray
 ```
 ---
 Find the first missing number (gap) in an array of integers greater than zero or return `null`.
 
 ```kotlin
-fun findFirstMissingNumber(array: IntArray): Int?
+fun IntArray.findFirstMissingNumber(): Int?
 ```
 
 ### Duplicate numbers
@@ -29,7 +29,7 @@ fun findFirstMissingNumber(array: IntArray): Int?
 Find the first duplicate number in an array of integers greater than zero or return `null`.
 
 ```kotlin
-fun findDuplicateNumber(array: IntArray): Int?
+fun IntArray.findDuplicateNumber(): Int?
 ```
 
 ### Special numbers
@@ -37,13 +37,13 @@ fun findDuplicateNumber(array: IntArray): Int?
 Find the smallest and largest number is an array and return them as tuple `(min, max)` or return `null`.
 
 ```kotlin
-fun findMinMaxNumbers(array: IntArray): Pair<Int, Int>?
+fun IntArray.findMinMaxNumbers(): Pair<Int, Int>?
 ```
 ---
 Find all prime numbers in an array. A helper-function `isPrime(n: Int)` is strongly advised.
 
 ```kotlin
-fun findPrimeNumbers(array: IntArray): IntArray
+fun IntArray.findPrimeNumbers(): IntArray
 ```
 
 ### Number series
@@ -51,7 +51,7 @@ fun findPrimeNumbers(array: IntArray): IntArray
 Find the longest series of ascending integers without gaps in an array in `O(n)` steps.
 
 ```kotlin
-fun findLongestSeriesOfNumbers(array: IntArray): IntArray
+fun IntArray.findLongestSeriesOfNumbers(): IntArray
 ```
 
 ### Array manipulations

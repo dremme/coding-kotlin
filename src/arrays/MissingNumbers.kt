@@ -1,23 +1,22 @@
 package arrays
 
-import java.util.*
+import java.util.BitSet
 
 /**
- * Finds all missing numbers in an [array] up to the given [maximum] (inclusive).
+ * Finds all missing numbers up to the given [maximum] (inclusive). Elements must be greater than zero.
  *
- * @param array   an array of integers. Elements must be greater than zero.
- * @param maximum the largest integer to be expected in the [array]. Greater than zero.
+ * @param maximum the largest integer to be expected in the array. Greater than zero.
  *
  * @return an array of missing numbers or empty if none were missing.
  */
-fun findMissingNumbers(array: IntArray, maximum: Int): IntArray {
-    require(array.all { it > 0 })
+fun IntArray.findMissingNumbers(maximum: Int): IntArray {
+    require(all { it > 0 })
     require(maximum > 0)
 
     val bitSet = BitSet(maximum)
-    array.forEach { bitSet.set(it - 1) }
+    forEach { bitSet.set(it - 1) }
 
-    val missingCount = maximum - array.size
+    val missingCount = maximum - size
     val missing = IntArray(missingCount)
     var lastIndex = 0
     (0 until missingCount).forEach {
@@ -28,16 +27,14 @@ fun findMissingNumbers(array: IntArray, maximum: Int): IntArray {
 }
 
 /**
- * Finds the first missing number (or gap) in an [array].
- *
- * @param array an array of integers. Elements must be greater than zero.
+ * Finds the first missing number (or gap). Elements must be greater than zero.
  *
  * @return the missing number or `null` if none is missing.
  */
-fun findFirstMissingNumber(array: IntArray): Int? {
-    require(array.all { it > 0 })
+fun IntArray.findFirstMissingNumber(): Int? {
+    require(all { it > 0 })
 
     var expected = 0
-    array.forEach { if (it != ++expected) return expected }
+    forEach { if (it != ++expected) return expected }
     return null
 }
