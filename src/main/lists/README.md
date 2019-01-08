@@ -37,6 +37,13 @@ Find the middle element at index `size / 2` rounded up, with only one loop or `n
 fun <T> LinkedList<T>.findMiddleElement(): T?
 ```
 ---
+Find the `n`-th element from the end, with only one loop or `null`.
+The last element would be `n = 0`, the second last `n = 1` and so forth.
+
+```kotlin
+fun <T> LinkedList<T>.findNthLastElement(n: Int): T?
+```
+---
 Determine if the linked list contains a cycle, meaning a node points to another node in the list or itself.
 This does not mean that the list is an actual circle. The cycle can occur at any point.
 

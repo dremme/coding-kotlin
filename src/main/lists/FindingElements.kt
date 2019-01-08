@@ -39,6 +39,26 @@ fun <T> LinkedList<T>.findMiddleElement(): T? {
 }
 
 /**
+ * Finds the [n]-th last element with only one loop.
+ *
+ * @param n the index from the end. `0` would be the last element, `1` the second last.
+ *
+ * @return the [n]-th element from the end or `null` if the list is empty or its size is less or equal to [n].
+ */
+fun <T> LinkedList<T>.findNthLastElement(n: Int): T? {
+    var counter = 0
+    var current = head
+    var nth = head
+
+    while (current != null) {
+        current = current.next
+        if (counter++ > n) nth = nth?.next
+    }
+
+    return if (counter < n) null else nth?.value
+}
+
+/**
  * Finds a cycle at any point of the list with only one loop.
  *
  * @return `true` if the list is cyclic. An empty list is not cyclic.

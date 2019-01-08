@@ -30,6 +30,11 @@ fun main() {
     assertEquals(4, list3.findMiddleElement())
     assertEquals("1", list5.findMiddleElement())
 
+    assertEquals(null, list1.findNthLastElement(0))
+    assertEquals(5, list2.findNthLastElement(0))
+    assertEquals(2, list2.findNthLastElement(3))
+    assertEquals(null, list5.findNthLastElement(3))
+
     assertFalse(list1.isCyclic())
     assertFalse(list2.isCyclic())
     assertTrue(list4.isCyclic())
