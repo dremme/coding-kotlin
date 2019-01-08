@@ -50,6 +50,10 @@ fun main() {
     assertTrue(intArrayOf(2, 3, 5, 23, 101) contentEquals array5.findPrimeNumbers())
     assertFails { array3.findPrimeNumbers() }
 
+    assertEquals(1, arrayOf<Any>().deepness())
+    assertEquals(1, arrayOf(1, "2").deepness())
+    assertEquals(3, arrayOf(arrayOf(1), 2, arrayOf(arrayOf(3)), 4).deepness())
+
     /*
      * Number series
      */
@@ -67,5 +71,5 @@ fun main() {
     assertTrue(intArrayOf(6, 4, 3, 1) contentEquals array2)
 
     assertTrue(intArrayOf() contentEquals arrayOf<Any>().flatten())
-    assertTrue(intArrayOf(1, 2, 3, 4) contentEquals arrayOf<Any>(arrayOf(1), 2, arrayOf(3, arrayOf(4))).flatten())
+    assertTrue(intArrayOf(1, 2, 3, 4) contentEquals arrayOf(arrayOf(1), 2, arrayOf(3, arrayOf(4))).flatten())
 }

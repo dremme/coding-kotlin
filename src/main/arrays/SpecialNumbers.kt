@@ -44,3 +44,10 @@ private fun Int.isPrime(): Boolean {
  * Square root rounded to the nearest lower integer.
  */
 private fun Int.sqrt() = Math.sqrt(toDouble()).toInt()
+
+/**
+ * Determines the deepness of an array of arrays. A flat array (even if empty) has a deepness of `1`.
+ */
+fun Array<*>.deepness(): Int {
+    return map { if (it is Array<*>) 1 + it.deepness() else 1 }.max() ?: 1
+}

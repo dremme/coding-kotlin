@@ -45,6 +45,12 @@ Find all prime numbers in an array. A helper-function `isPrime(n: Int)` is stron
 ```kotlin
 fun IntArray.findPrimeNumbers(): IntArray
 ```
+---
+Determine the deepness of an array of arrays. A flat array has a deepness of `1`, also when it's empty.
+
+```kotlin
+fun Array<*>.deepness(): Int
+```
 
 ### Number series
 
