@@ -46,6 +46,12 @@ fun main() {
     list1.reverse()
     list2.reverse()
     assertTrue(list6 contentEquals list2)
+
+    assertTrue(list1 contentEquals LinkedList<Int>().distinct())
+    assertTrue(
+        LinkedList<Int>().addAll(6, 1, 2, 7, 8, 4)
+                contentEquals LinkedList<Int>().addAll(6, 6, 1, 2, 7, 8, 8, 8, 4).distinct()
+    )
 }
 
 /**

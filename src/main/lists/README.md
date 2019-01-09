@@ -60,3 +60,9 @@ Reverse a linked list with one loop.
 ```kotlin
 fun <T> LinkedList<T>.reverse()
 ```
+---
+Create a distinct linked list (no duplicates) from a linked list in `O(n)`. The new list must retain the original order.
+
+```kotlin
+fun <T> LinkedList<T>.distinct(): LinkedList<T>
+```

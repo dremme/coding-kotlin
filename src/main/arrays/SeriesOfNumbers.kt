@@ -19,5 +19,6 @@ fun IntArray.findLongestSeriesOfNumbers(): IntArray {
             end = it + 1
         }
     }
+
     return copyOfRange(start, end)
 }
