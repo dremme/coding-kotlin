@@ -35,3 +35,9 @@ Convert a string of numeric characters into an integer (unsigned), without using
 ```kotlin
 fun String.toInt(): Int
 ```
+---
+Convert to a signed double like the above. The string is always a well formed string representation of a floating point number.
+
+```kotlin
+fun String.toDouble(): Double
+```
