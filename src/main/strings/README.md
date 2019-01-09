@@ -14,6 +14,20 @@ Find the longest common substring between two strings or `null`. The function sh
 fun String.findLongestCommonSubstring(other: String): String?
 ```
 
+### Special strings
+
+Check if a string only contains numeric characters, without using regular expressions.
+
+```kotlin
+fun String.isNumeric(): Boolean
+```
+---
+Determine if a string is a palindrome (reads same forward and backward).
+
+```kotlin
+fun String.isPalindrome(): Boolean
+```
+
 ### Converting strings
 
 Convert a string of numeric characters into an integer (unsigned), without using and libraries or parsing functions.

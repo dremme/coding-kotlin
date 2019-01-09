@@ -1,6 +1,8 @@
 package strings
 
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 /**
  * Testing string functions.
@@ -10,6 +12,16 @@ fun main() {
     assertEquals(null, "ab".findLongestCommonSubstring("dc"))
     assertEquals("a", "a".findLongestCommonSubstring("aa"))
     assertEquals("fgh", "abcdefgh".findLongestCommonSubstring("abwxyzfghij"))
+
+    // Special strings
+    assertFalse("213a".isNumeric())
+    assertTrue("12.345".isNumeric())
+    assertTrue("-12".isNumeric())
+    assertTrue("+12,345".isNumeric())
+
+    assertFalse("Anno".isPalindrome())
+    assertTrue("Anna".isPalindrome())
+    assertTrue("Rentner".isPalindrome())
 
     // Converting strings
     assertEquals(0, "0".toInt())
