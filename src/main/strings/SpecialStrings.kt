@@ -24,9 +24,10 @@ fun String.isPalindrome(): Boolean {
 fun String.isBalanced(): Boolean {
     val stack = ArrayDeque<Char>()
     forEach {
-        if (it == '(') stack.push(it)
-        else if (it == ')' && stack.isNotEmpty()) stack.pop()
-        else if (it == ')' && stack.isEmpty()) return false
+        when (it) {
+            '(' -> stack.push(it)
+            ')' -> stack.pollFirst() ?: return false
+        }
     }
     return stack.isEmpty()
 }
