@@ -23,6 +23,12 @@ fun main() {
     assertTrue("Anna".isPalindrome())
     assertTrue("Rentner".isPalindrome())
 
+    assertTrue("".isBalanced())
+    assertTrue("(a*(b+(c)*d/(e)))".isBalanced())
+    assertFalse(")a*(b+(c)*d/(e))".isBalanced())
+    assertFalse("(a*(b+(c)*d/(e))".isBalanced())
+    assertFalse("(a)*(b".isBalanced())
+
     // Converting strings
     assertEquals(0, "0".toInt())
     assertEquals(9, "9".toInt())

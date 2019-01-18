@@ -27,6 +27,12 @@ Determine if a string is a palindrome (reads same forward and backward).
 ```kotlin
 fun String.isPalindrome(): Boolean
 ```
+---
+Determine if a string contains balanced pairs of opening and closing braces (`'('` and `')'`), in `O(1)` time complexity
+
+```kotlin
+fun String.isBalanced(): Boolean
+ ```
 
 ### Converting strings
 
