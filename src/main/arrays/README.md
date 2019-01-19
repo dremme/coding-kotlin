@@ -62,7 +62,7 @@ fun IntArray.findLongestSeriesOfNumbers(): IntArray
 
 ### Array manipulations
 
-Reverse an array in place in `O(n)`.
+Reverse an array of integers in place in `O(n)`.
 
 ```kotlin
 fun IntArray.reverse()
@@ -73,4 +73,11 @@ No utility functions or other collections than arrays are allowed.
 
 ```kotlin
 fun Array<*>.flatten(): IntArray
+```
+---
+Transpose an array, creating a new array that is reflected over the main diagonal (top-left to bottom-right).
+Space and time complexity should not exceed `O(n)`.
+
+```kotlin
+fun Array<IntArray>.transpose(): Array<IntArray>
 ```

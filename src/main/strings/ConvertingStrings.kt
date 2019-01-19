@@ -3,7 +3,7 @@ package strings
 private const val ASCII_ZERO = '0'.toInt()
 
 /**
- * Converts a string of numeric characters into an unsigned integer.
+ * Converts the string of numeric characters into an unsigned integer.
  *
  * @return the converted string as integer.
  */
@@ -12,7 +12,7 @@ fun String.toInt(): Int {
 }
 
 /**
- * Converts a string of numeric characters into a signed double.
+ * Converts the string of numeric characters into a signed double.
  *
  * @return the converted string as double.
  */
