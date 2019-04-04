@@ -1,8 +1,8 @@
 # Linked Lists
 
-Linked lists are a basic list type often used to realise stacks or queues.
-They offer retrieving and removing the first and last element in `O(1)`, as well as prepending an element.
-All other actions are done in `O(n)` for singly linked lists.
+A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory.
+Instead, each element points to the next.
+It is a data structure consisting of a collection of nodes which together represent a sequence.
 
 Here we will focus on a generic singly linked list like this:
 

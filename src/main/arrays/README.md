@@ -1,14 +1,10 @@
 # Arrays
 
-Arrays are one of the most common data structures in programming. They are static in size and offer get and set in `O(1)`.
-Copying values from one to another array can also be done in `O(1)`.
+An array data structure, or simply an array, is a data structure consisting of a collection of elements (values or variables),
+each identified by one array index.
 
-A lot of other data structures rely on arrays, so questions about array algorithms are quite common as well.
-
-Of course often times it is __not__ allowed to use any libraries or utility functions provided by the programming language.
-Also unnecessary intermediate array creation should be avoided and other collections are generally not allowed.
-
-Method extensions and self-written utility functions _might_ be allowed.
+An array is stored such that the position of each element can be computed from its index tuple by a mathematical formula.
+Therefore, basic operations have a complexity of `O(1)`.
 
 ### Missing numbers
 

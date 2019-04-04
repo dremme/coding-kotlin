@@ -8,7 +8,8 @@ This Project is separated into popular categories:
  * [Arrays](src/main/arrays/README.md)
  * [Linked Lists](src/main/lists/README.md)
  * Working with Collections
+ * Numbers
  * [Strings](src/main/strings/README.md)
  * Binary Trees
- * Patterns
- * Misc
+ * [Algorithms](src/main/algorithms/README.md)
+ * Design Patterns

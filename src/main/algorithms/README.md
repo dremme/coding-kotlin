@@ -1,8 +1,8 @@
 # Algorithms
 
-Algorithms help solving problems efficiently and therefore common and proven algorithms are important to know.
-
-Many such algorithms can be applied to strings, arrays or collections, to sort, search or mutate.
+An algorithm can be expressed within a finite amount of space and time. 
+Starting from an initial state and initial input (perhaps empty), the instructions describe a computation that, when executed,
+proceeds through a finite number of well-defined successive states, eventually producing "output" and terminating at a final ending state.
 
 ### Pancake Sort
 
