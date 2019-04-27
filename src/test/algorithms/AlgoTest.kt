@@ -21,4 +21,10 @@ fun main() {
     array2.pancakeSort()
     assertTrue(array1 contentEquals array2)
     assertFails { array4.pancakeSort() }
+
+    val array5 = intArrayOf(5, 2, 7, 8, 1, 4, 6, 3)
+    val array6 = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8)
+
+    array5.quicksort()
+    assertTrue { array5 contentEquals array6 }
 }

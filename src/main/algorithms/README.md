@@ -20,3 +20,13 @@ fun IntArray.flipN(n: Int)
 ```
 
 The algorithms must work in place and in `O(1)` space complexity.
+
+### Quicksort
+
+Implement quicksort; switching to insertion sort is not needed. All elements of the array are greater than zero.
+
+```kotlin
+fun IntArray.quicksort()
+```
+
+The algorithm must work in place and in `O(1)` space complexity.

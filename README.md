@@ -13,3 +13,4 @@ This Project is separated into popular categories:
  * Binary Trees
  * [Algorithms](src/main/algorithms/README.md)
  * Design Patterns
+ * Multi-threading
