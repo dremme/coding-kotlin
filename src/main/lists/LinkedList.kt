@@ -9,7 +9,7 @@ class LinkedList<T> {
     /**
      * The head of the list, i.e. the first element.
      */
-    var head: Node<T>? = null
+    var head: Node? = null
     private var tail = head
 
     /**
@@ -35,7 +35,7 @@ class LinkedList<T> {
     /**
      * A node class, or element of the list, containing a [value] and a [next] element or `null` if there is none.
      */
-    inner class Node<T>(var value: T, var next: Node<T>? = null) {
+    inner class Node(var value: T, var next: Node? = null) {
         override fun toString() = value.toString()
     }
 

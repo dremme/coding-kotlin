@@ -9,7 +9,7 @@ Here we will focus on a generic singly linked list like this:
 ```kotlin
 class LinkedList<T> {
 
-    var head: Node<T>? = null
+    var head: Node? = null
     private var tail = head
 
     fun add(value: T) {
@@ -18,7 +18,7 @@ class LinkedList<T> {
         tail = node
     }
 
-    inner class Node<T>(var value: T, var next: Node<T>? = null)
+    inner class Node(var value: T, var next: Node? = null)
 
 }
 ```

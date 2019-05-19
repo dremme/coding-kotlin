@@ -5,8 +5,8 @@ package lists
  */
 fun <T> LinkedList<T>.reverse() {
     var pointer = head
-    var current: LinkedList<T>.Node<T>?
-    var previous: LinkedList<T>.Node<T>? = null
+    var current: LinkedList<T>.Node?
+    var previous: LinkedList<T>.Node? = null
 
     while (pointer != null) {
         current = pointer

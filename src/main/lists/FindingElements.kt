@@ -15,7 +15,7 @@ fun LinkedList<*>.size(): Int {
 /**
  * Determines the size recursively.
  */
-fun LinkedList<*>.size(current: LinkedList<*>.Node<*>? = head): Int {
+fun LinkedList<*>.size(current: LinkedList<*>.Node? = head): Int {
     return if (current == null) 0 else size(current.next) + 1
 }
 

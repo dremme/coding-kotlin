@@ -10,7 +10,7 @@ This Project is separated into popular categories:
  * Working with Collections
  * Numbers
  * [Strings](src/main/strings/README.md)
- * Binary Trees
+ * [Binary Trees](src/main/trees/README.md)
  * [Algorithms](src/main/algorithms/README.md)
  * Design Patterns
  * Multi-threading

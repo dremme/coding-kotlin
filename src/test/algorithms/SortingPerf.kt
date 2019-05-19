@@ -3,7 +3,7 @@ package algorithms
 /**
  * Testing sorting algorithm performance on random arrays.
  */
-fun main() {
+private fun main() {
     // Warm up phase
     randomArray(1000).pancakeSort()
     randomArray(1000).quicksort()
