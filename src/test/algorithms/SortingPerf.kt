@@ -32,4 +32,4 @@ private fun main() {
     }
 }
 
-private fun randomArray(size: Int) = IntArray(size) { (Math.random() * 1000 + 1).toInt() }
+private fun randomArray(size: Int) = (1 until size).shuffled().toIntArray()
