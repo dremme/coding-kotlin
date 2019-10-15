@@ -14,14 +14,17 @@ fun main() {
     assertEquals("fgh", "abcdefgh".findLongestCommonSubstring("abwxyzfghij"))
 
     // Special strings
-    assertFalse("213a".isNumeric())
+    assertTrue("1".isNumeric())
     assertTrue("12.345".isNumeric())
     assertTrue("-12".isNumeric())
     assertTrue("+12,345".isNumeric())
+    assertFalse("213a".isNumeric())
+    assertFalse("4.4.4".isNumeric())
+    assertFalse("6.".isNumeric())
 
-    assertFalse("Anno".isPalindrome())
     assertTrue("Anna".isPalindrome())
     assertTrue("Rentner".isPalindrome())
+    assertFalse("Anno".isPalindrome())
 
     assertTrue("".isBalanced())
     assertTrue("(a*(b+(c)*d/(e)))".isBalanced())

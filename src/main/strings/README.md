@@ -13,7 +13,7 @@ fun String.findLongestCommonSubstring(other: String): String?
 
 ### Special strings
 
-Check if a string only contains numeric characters, without using regular expressions.
+Check if a string is numeric. Allowed formats are `3,141`, `+3` or `-.141`.
 
 ```kotlin
 fun String.isNumeric(): Boolean

@@ -2,6 +2,7 @@ package arrays
 
 import kotlin.test.assertEquals
 import kotlin.test.assertFails
+import kotlin.test.assertNotSame
 import kotlin.test.assertTrue
 
 /*
@@ -77,6 +78,10 @@ fun main() {
     val matrix1T = arrayOf(intArrayOf(11, 21), intArrayOf(12, 22))
     val matrix2 = arrayOf(intArrayOf(11, 12), intArrayOf(21, 22), intArrayOf(31, 32))
     val matrix2T = arrayOf(intArrayOf(11, 21, 31), intArrayOf(12, 22, 32))
-    assertTrue(matrix1T contentDeepEquals  matrix1.transpose())
-    assertTrue(matrix2T contentDeepEquals  matrix2.transpose())
+    val matrix3 = arrayOf<IntArray>()
+    val matrix3T = arrayOf<IntArray>()
+    assertTrue(matrix1T contentDeepEquals matrix1.transpose())
+    assertTrue(matrix2T contentDeepEquals matrix2.transpose())
+    assertTrue(matrix3T contentDeepEquals matrix3.transpose())
+    assertNotSame(matrix3T, matrix3.transpose())
 }

@@ -36,8 +36,10 @@ fun Array<*>.flatten(): IntArray {
  * @return the transposed matrix.
  */
 fun Array<IntArray>.transpose(): Array<IntArray> {
-    val rows = this.size
-    val cols = this[0].size
+    if (isEmpty()) return emptyArray()
+
+    val rows = size
+    val cols = first().size
     val array = Array(cols) { IntArray(rows) }
 
     (0 until cols).forEach { x ->

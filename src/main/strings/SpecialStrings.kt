@@ -2,13 +2,24 @@ package strings
 
 import java.util.ArrayDeque
 
-private val SYMBOLS = setOf('.', ',', '+', '-')
+private val NUMBERS = setOf('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
+private val SIGNS = setOf('+', '-')
+private val SEPARATORS = setOf(',', '.')
 
 /**
- * Checks if the string only contains numeric characters, e.g. `"-12.532"`.
+ * Checks if the string only contains numeric characters, e.g. `-12.532`.
  */
 fun String.isNumeric(): Boolean {
-    return all { Character.isDigit(it) || SYMBOLS.contains(it) }
+    var separator = false
+    val sign = if (SIGNS.contains(first())) 1 else 0
+    drop(sign).dropLast(1).forEach {
+        when {
+            NUMBERS.contains(it) -> Unit
+            SEPARATORS.contains(it) -> if (separator) return false else separator = true
+            else -> return false
+        }
+    }
+    return NUMBERS.contains(last())
 }
 
 /**
