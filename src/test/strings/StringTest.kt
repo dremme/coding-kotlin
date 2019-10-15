@@ -28,12 +28,7 @@ fun main() {
     assertFalse(")a*(b+(c)*d/(e))".isBalanced())
     assertFalse("(a*(b+(c)*d/(e))".isBalanced())
     assertFalse("(a)*(b".isBalanced())
-
-    assertTrue("".isBalanced2())
-    assertTrue("(a*(b+(c)*d/(e)))".isBalanced2())
-    assertFalse(")a*(b+(c)*d/(e))".isBalanced2())
-    assertFalse("(a*(b+(c)*d/(e))".isBalanced2())
-    assertFalse("(a)*(b".isBalanced2())
+    assertFalse(")(".isBalanced())
 
     // Converting strings
     assertEquals(0, "0".toInt())

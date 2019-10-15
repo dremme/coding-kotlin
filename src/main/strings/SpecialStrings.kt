@@ -22,21 +22,6 @@ fun String.isPalindrome(): Boolean {
  * Determines if the string contains balanced pairs of `(` and closing braces `)` in `O(n)` time complexity.
  */
 fun String.isBalanced(): Boolean {
-    var n = 0
-    forEach {
-        when (it) {
-            '(' -> n++
-            ')' -> n--
-        }
-    }
-    return n == 0
-}
-
-/**
- * Determines if the string contains balanced pairs of `(` and closing braces `)` in `O(n)` time complexity
- * using a stack.
- */
-fun String.isBalanced2(): Boolean {
     val stack = ArrayDeque<Char>()
     forEach {
         when (it) {
